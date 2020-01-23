@@ -1,0 +1,14 @@
+Creacion de proyectos
+Servidor de desarrollo
+Vistas
+Configuracion de BD
+Ceación de modelos
+Activación de modelos
+Sitio administrativo de Django
+Levantar errores 404
+Platillas
+Asignar nombres a URLs
+Vistas genéricas
+Pruebas automatizadas
+Archivos estaticos (Personalizar apariencia)
+Personalizar sitio administrativo
