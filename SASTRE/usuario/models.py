@@ -14,10 +14,8 @@ GENERO_OPCION= dict(F= 'Femenino', M= 'Masculio',)
 class Usuario(models.Model):
 	"""
 		docstring for usuario: Clase que describe al objeto usuario.
-		Nesesario aclarar diferencia entre cuenta y usuario
 	"""
 
-	#nombreUsuario= models.ForeignKey('auth.User', on_delete= models.CASCADE, null=True)
 	username = models.CharField(max_length= 10)
 	password = models.CharField(max_length= 100)
 	email = models.CharField(max_length = 100)

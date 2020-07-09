@@ -54,7 +54,8 @@ class PACrear(SuccessMessageMixin, CreateView):
     model = PersonalAdministrativo
     form = PersonalAdministrativo
     fields = "__all__"
-    success_message = '¡Personal Administrativo creado correctamente!' # Mostramos este Mensaje luego de crear un personal administrativo     
+    # Mostramos este Mensaje luego de crear un personal administrativo     
+    success_message = '¡Personal Administrativo creado correctamente!'
     
     
     def form_valid(self, form):

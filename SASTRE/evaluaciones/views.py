@@ -139,6 +139,7 @@ def evaluacionDetalle(request):
 		profesorId = Profesor.objects.get(username=user)
 		cuestionarios = Cuestionario.objects.filter(profesorUDA=profesorId, UA=request.POST['UAId'])
 		tokensNormalizados = normalizarTexto(cuestionarios)
+		#print(tokensNormalizados)
 		noTokens = len(tokensNormalizados)
 		#Analisis con diccionario SEL
 		if not (path.exists("evaluaciones/static/img/graficaSEL.png")):
@@ -146,6 +147,7 @@ def evaluacionDetalle(request):
 			noEtiquetasSEL = 0
 			sentimientos = ["Alegría","Enojo","Miedo","Repulsión","Tristeza","Sorpresa"]
 			etiquetasSEL = etiquetarTokens(tokensNormalizados,1)
+			#print(etiquetasSEL)
 			for etiqueta in etiquetasSEL:
 				if etiqueta != "None":
 					noEtiquetasSEL += 1
@@ -170,6 +172,7 @@ def evaluacionDetalle(request):
 			noEtiquetasFull = 0
 			etiquetasFullXPolaridad = [0,0]
 			etiquetasFull = etiquetarTokens(tokensNormalizados,2)
+			#print(etiquetasFull)
 			for etiqueta in etiquetasFull:
 				if etiqueta != "None":
 					noEtiquetasFull += 1
@@ -193,6 +196,7 @@ def evaluacionDetalle(request):
 			polaridad = ["Positiva", "Negativa"]
 			etiquetasMedXPolaridad = [0,0]
 			etiquetasMed = etiquetarTokens(tokensNormalizados,3)
+			#print(etiquetasMed)
 			for etiqueta in etiquetasMed:
 				if etiqueta != "None":
 					noEtiquetasMed += 1

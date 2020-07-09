@@ -1,0 +1,46 @@
+1. Actualiza la lista de paquetes disponibles y sus versiones
+sudo apt-get update
+
+2 . Actualizar paquetes
+sudo apt-get upgrade
+
+3. Instalar python 3.8
+sudo apt-get install python3.8
+
+4. Clonar repositorio
+git clone https://github.com/davidcast973/TrabajoTerminalESCOM.git
+
+5. Siturse en la suguinete ruta:
+/public_html/TrabajoTerminalESCOM/SASTRE
+
+6. Crear entorno virtual
+python3 -m venv sastreenv
+
+7. Activamos el entorno virtual:
+source sastreenv/bin/activate
+
+8. Instalar/Actualizar PIP
+python3 -m pip install --upgrade pip
+
+9. Instalar/actualizar setuptools
+pip install -U setuptools
+
+10. Instalar Prostgresql
+sudo apt install postgresql postgresql-contrib
+
+11. Cambiar a usuario postgres
+sudo -i -u postgres
+
+12. Instalar psycog2
+sudo apt install libpq-dev python-dev
+
+sudo apt install build-essential
+
+13. Instalar librerias asociadas al desarrollo
+pip install -U -r requirements.txt
+
+14. Instalar soporte en español´para spacy
+python -m spacy download es
+
+15. Hacer las migraciones:
+python manage.py migrate
